@@ -1,0 +1,481 @@
+@font-face {
+    font-family: 'Anetier';
+    src: url('./fonts/AvenirLTStd-Black.otf') format('opentype');
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+:root {
+    --primary-color: #E97FBE;
+    --primary-dark-color: #A54E63;
+    --primary-light-color: #FFD6E9;
+    --secondary-color: #FFE547;
+    --grey-color: #4D4D4D;
+    --light-grey-color: #BFBFBF;
+    --white-color: #FFFFFF;
+    --background-color: #FFFAFA;
+    --image-background-color: #D9D9D9;
+    --card-shadow-color: #DDD5D5;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+
+    font-family: 'Anetier';
+    font-style: normal;
+    background: var(--background-color);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--primary-dark-color);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 3.25rem;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--primary-dark-color);
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--primary-dark-color);
+}
+
+p {
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--grey-color);
+}
+
+button {
+    padding: 1rem 4rem;
+    color: white;
+
+    /* color-primary-normal */
+    background: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-weight: 350;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.btn-circle {
+    border-radius: 50px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    height: 10vh;
+}
+
+nav a {
+
+    flex: 1;
+
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: center;
+    text-wrap: nowrap;
+    color: var(--primary-dark-color);
+    margin: 1rem;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header #sub-title-line {
+    border: 5px solid var(--secondary-color);
+    transform: rotate(90deg);
+    margin-right: 1rem;
+}
+
+header img {
+    aspect-ratio: 3/4;
+    width: 100%;
+    max-width: 80%;
+    background: var(--image-background-color);
+    border-radius: 24px;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+section, header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    height: fit-content;
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+}
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(20vh); /* Start slightly below */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.left-layout {
+    width: 40%;
+}
+
+.right-layout {
+    width: 50%;
+}
+
+.nav-link-layout {
+    width: 40vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 100%;
+    max-width: 180px;
+    background: white;
+    box-shadow: 0px 10px 30px var(--card-shadow-color);
+    border-radius: 24px;
+    margin: 1rem;
+}
+
+
+.card img {
+    width: 100px;
+    height: 100px;
+    filter: var(--primary-color);
+}
+
+.card:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scaleY(1.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover img, .card:hover h3 {
+    filter: brightness(0) invert(1);
+}
+
+.circle-img-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    width: 100%;
+    max-width: 268px;
+    margin-top: 200px;
+
+    background: white;
+    box-shadow: 0px 10px 30px var(--card-shadow-color);
+    border-radius: 24px;
+}
+
+.circle-img-card img {
+    /* Ellipse 1449 */
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--image-background-color);
+
+    margin: -100px 0 0;
+}
+
+.circle-img-card h3 {
+    padding: 20px 24px 48px;
+}
+
+.img-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100%;
+    max-width: 268px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px var(--card-shadow-color);
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 1rem;
+
+}
+
+.img-card img {
+    aspect-ratio: 3/4;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.img-card-body {
+    padding: 1rem;
+}
+
+.card-quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    width: calc(100% - 5rem);
+    max-width: 400px;
+    background: white;
+    box-shadow: 0px 10px 30px var(--card-shadow-color);
+    border-radius: 24px;
+    margin: 2rem;
+}
+
+.card-quote .comment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 50%;
+    color: var(--primary-dark-color);
+}
+
+.card-quote .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
+
+.card-quote .user img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--image-background-color);
+    margin-right: 1rem;
+}
+
+#upper-quote, #lower-quote {
+    position: absolute;
+    width: 74.5px;
+    height: 63px;
+}
+
+#upper-quote {
+    left: 48px;
+    top: -24px;
+}
+
+#lower-quote {
+    right: 48px;
+    bottom: -24px;
+    transform: scale(-1, -1);
+}
+
+#upper-quote.primary path,
+#lower-quote.primary path {
+    fill: var(--primary-color);
+}
+
+#upper-quote.secondary path,
+#lower-quote.secondary path {
+    fill: var(--light-grey-color);
+}
+
+.subscribe-text {
+    filter: drop-shadow(0px 2px 11px rgba(0, 0, 0, 0.6)) drop-shadow(0px 2px 50px rgba(0, 0, 0, 0.8));
+    text-align: center;
+    color: white;
+}
+
+.input-with-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    background: white;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-with-button input {
+
+    width: 100%;
+    height: 100%;
+    flex: 5;
+    border: none;
+    padding: 15px;
+    border: none;
+
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+div.circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -40px;
+    bottom: 0;
+    z-index: -1;
+
+    background: var(--secondary-color);
+    border-radius: 100%;
+    
+}
+
+div.square {
+    position: absolute;
+    width: 156px;
+    height: 156px;
+    right: 0;
+    top: -50px;
+    z-index: -1;
+
+    background: var(--primary-light-color);
+    border-radius: 20px;
+
+}
+
+.bg-2 {
+    position: absolute;
+    width: 70%;
+    right: 60px;
+    bottom: -280px;
+
+    mix-blend-mode: darken;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    .nav-link-layout {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-link-layout {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 1rem 5%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .left-layout, .right-layout {
+        width: 100%;
+    }
+
+    .card, .img-card {
+        max-width: 80%;
+    }
+
+    .card-quote {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .left-layout, .right-layout {
+        width: 100%;
+    }
+
+    .card, .img-card, .card-quote {
+        max-width: 80%;
+    }
+
+    .input-with-button {
+        flex-direction: column;
+    }
+
+    .input-with-button input {
+        margin-bottom: 1rem;
+    }
+}
